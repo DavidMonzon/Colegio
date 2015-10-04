@@ -14,6 +14,7 @@
                 <DataGridTextColumn x:Name="LocationColumn" Binding="{Binding Path=Name}" Header="Location" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="DaysColumn" Binding="{Binding Path=Budget}" Header="Days" Width="SizeToHeader"/>
                 <DataGridTextColumn x:Name="TimeColumn" Binding="{Binding Path=Budget}" Header="Time" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="DepartmentColumn" Binding="{Binding Path=Course.Department.Name}" Header="Department" Width="SizeToHeader"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

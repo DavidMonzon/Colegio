@@ -28,9 +28,9 @@ Namespace Modules.Departments.ViewModels
             'Initialize property variable of departments
             Me._departments = New ObservableCollection(Of Department)
             ' Register service with ServiceLocator
-            ServiceLocator.RegisterService(Of IDepartmentService)(New DepartmentService)
+            ServiceLocator.RegisterService(Of IPersonService)(New DepartmentService)
             ' Initialize dataAccess from service
-            Me.dataAccess = GetService(Of IDepartmentService)()
+            Me.dataAccess = GetService(Of IPersonService)()
             ' Populate departments property variable 
             For Each element In Me.GetAllDepartments
                 Me._departments.Add(element)

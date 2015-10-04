@@ -16,7 +16,7 @@ Namespace Modules.Departments.ViewModels
             End Get
             Set(value As ObservableCollection(Of Course))
                 Me._courses = value
-                OnPropertyChanged("Departments")
+                OnPropertyChanged("Course")
             End Set
         End Property
 

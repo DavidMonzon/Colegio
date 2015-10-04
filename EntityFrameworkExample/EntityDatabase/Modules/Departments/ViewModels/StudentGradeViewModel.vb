@@ -8,7 +8,7 @@ Namespace Modules.Departments.ViewModels
         Inherits ViewModelBase
 
         Private _studentgrades As ObservableCollection(Of StudentGrade)
-        Private dataAccess As IStudentGrade
+        Private dataAccess As IStudentGradeService
 
         Public Property StudentGrades As ObservableCollection(Of StudentGrade)
             Get
@@ -29,9 +29,9 @@ Namespace Modules.Departments.ViewModels
             'Initialize property variable of persons
             Me._studentgrades = New ObservableCollection(Of StudentGrade)
             ' Register service with ServiceLocator
-            ServiceLocator.RegisterService(Of IStudentGrade)(New PersonService)
+            ServiceLocator.RegisterService(Of IStudentGradeService)(New StudentGradeService)
             ' Initialize dataAccess from service
-            Me.dataAccess = GetService(Of IPersonService)()
+            Me.dataAccess = GetService(Of IStudentGradeService)()
             ' Populate persons property variable 
             For Each element In Me.GetAllStudentGrades
                 Me._studentgrades.Add(element)

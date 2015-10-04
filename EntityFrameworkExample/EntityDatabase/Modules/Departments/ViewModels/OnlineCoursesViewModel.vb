@@ -6,21 +6,21 @@ Namespace Modules.Departments.ViewModels
     Public Class OnlineCoursesViewModel
         Inherits ViewModelBase
 
-        Private _onlinecourses As ObservableCollection(Of OnlineCourse)
-        Private dataAccess As IPersonService
+        Private _onlinecourses As ObservableCollection(Of Global.OnlineCourse)
+        Private dataAccess As IOnlineCourseService
 
-        Public Property OnlineCourse As ObservableCollection(Of OnlineCourse)
+        Public Property OnlineCourse As ObservableCollection(Of Global.OnlineCourse)
             Get
                 Return Me._onlinecourses
             End Get
-            Set(value As ObservableCollection(Of OnlineCourse))
+            Set(value As ObservableCollection(Of Global.OnlineCourse))
                 Me._onlinecourses = value
-                OnPropertyChanged("Departments")
+                OnPropertyChanged("OnlineCorse")
             End Set
         End Property
 
         ' Function to get all persons from service
-        Private Function GetAllPersons() As IQueryable(Of OnlineCourse)
+        Private Function GetAllOnlineCourses() As IQueryable(Of Global.OnlineCourse)
             Return Me.dataAccess.GetAllOnlineCourses
         End Function
 

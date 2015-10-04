@@ -4,7 +4,7 @@ Namespace BusinessLogic.Services.Implementations
     Public Class OnlineCourseService
         Implements IOnlineCourseService
 
-        Public Function GetAllOnlineCourses() As IQueryable(Of OnlineCourseService) Implements IOnlineCourseService.GetAllOnlineCourses
+        Public Function GetAllOnlineCourse() As IQueryable(Of OnlineCourse) Implements IOnlineCourseService.GetAllOnlineCourse
             Return DataContext.DBEntities.OnlineCourses
         End Function
     End Class
